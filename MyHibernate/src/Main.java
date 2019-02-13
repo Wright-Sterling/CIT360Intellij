@@ -1,3 +1,4 @@
+import myhibernate.InventoryEntity;
 import org.hibernate.HibernateException;
 import org.hibernate.Metamodel;
 import org.hibernate.query.Query;
@@ -37,7 +38,9 @@ public class Main {
                 final Query query = session.createQuery("from " + entityName);
                 System.out.println("executing: " + query.getQueryString());
                 for (Object o : query.list()) {
-                    System.out.println("  " + o);
+                    InventoryEntity ie = (InventoryEntity) o;
+                    System.out.println("Id: " + ie.getId());
+                    System.out.println("Description: " + ie.getDescription());
                 }
             }
         } finally {
