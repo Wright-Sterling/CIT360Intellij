@@ -1,0 +1,172 @@
+{
+	"quiz": {
+		"movies": {
+			"q1": {
+				"question": "Which of these great movies was made first?",
+				"options": [
+					"Star Wars",
+					"Citizen Kane",
+					"Casablanca",
+					"Lawrence of Arabia"
+				],
+				"answer": "Citizen Kane"
+			},
+			"q2": {
+				"question": "Judy Garland played Dorothy Gale in what movie?",
+				"options": [
+					"Gone with the Wind",
+					"A Streetcar Named Desire",
+					"The Wizard of Oz",
+					"Peter Pan"
+				],
+				"answer": "The Wizard of Oz"
+			},
+			"q3": {
+				"question": "What was the name of the mechanical shark used to film JAWS?",
+				"options": [
+					"Bruce",
+					"Fred",
+					"Chomps",
+					"Larry"
+				],
+				"answer": "Bruce"
+			},
+			"q4": {
+				"question": "Which movie earned Tom Hanks an Oscar in 1994?",
+				"options": [
+					"Saving Private Ryan",
+					"You've Got Mail",
+					"Castaway",
+					"Forrest Gump"
+				],
+				"answer": "Forrest Gump"
+			}
+		},
+		"music": {
+			"q1": {
+				"question": "Who makes the Stratocaster guitar?",
+				"options": [
+					"Gibson",
+					"Fender",
+					"Smiths",
+					"Martin"
+				],
+				"answer": "Fender"
+			},
+			"q2": {
+				"question": "Who composed the classical piece \"Peter and the Wolf \"?",
+				"options": [
+					"Prokofiev",
+					"Tchaikovsy",
+					"Rachmaninoff",
+					"Stravinsky"
+				],
+				"answer": "Prokofiev"
+			},
+			"q3": {
+				"question": "How many strings does a standard violin have?",
+				"options": [
+					"Three",
+					"Four",
+					"Five",
+					"Six"
+				],
+				"answer": "Four"
+			},
+			"q4": {
+				"question": "What record label did The Beatles establish?",
+				"options": [
+					"Liverpool",
+					"Apple",
+					"MopTop",
+					"Strawberry Fields"
+				],
+				"answer": "Apple"
+			}
+		},
+		"sports": {
+			"q1": {
+				"question": "How many players are on the field during a game of American football?",
+				"options": [
+					"14",
+					"18",
+					"20",
+					"22"
+				],
+				"answer": "22"
+			},
+			"q2": {
+				"question": "Who owns the blimps that fly over sporting events?",
+				"options": [
+					"Michelin",
+					"U.S. Air Force",
+					"Goodyear",
+					"Budweiser"
+				],
+				"answer": "Goodyear"
+			},
+			"q3": {
+				"question": "What male tennis player has won the most Grand Slam titles?",
+				"options": [
+					"Federer",
+					"Agassi",
+					"Connors",
+					"McEnroe"
+				],
+				"answer": "Federer"
+			},
+			"q4": {
+				"question": "Which movie earned Tom Hanks an Oscar in 1994?",
+				"options": [
+					"Saving Private Ryan",
+					"You've Got Mail",
+					"Castaway",
+					"Forrest Gump"
+				],
+				"answer": "Forrest Gump"
+			}
+		},
+		"books": {
+			"q1": {
+				"question": "Who wrote the book about the wolf/dog \"White Fang\"?",
+				"options": [
+					"Jack London",
+					"Mark Twain",
+					"Edgar Allen Poe",
+					"Jules Verne"
+				],
+				"answer": "Jack London"
+			},
+			"q2": {
+				"question": "\"The Hound of the Baskervilles\" stars which fictional detective?",
+				"options": [
+					"Poirot",
+					"Wolfe",
+					"Marple",
+					"Holmes"
+				],
+				"answer": "Holmes"
+			},
+			"q3": {
+				"question": "Samuel Langhorne Clemens is better known by what pen name?",
+				"options": [
+					"Mark Twain",
+					"James Patterson",
+					"Stephen King",
+					"James Fenimore Cooper"
+				],
+				"answer": "Mark Twain"
+			},
+			"q4": {
+				"question": "Who wrote \"The Lion, the Witch, and the Wardrobe\"?",
+				"options": [
+					"Ernest Hemingway",
+					"C.S. Lewis",
+					"Charles Dickens",
+					"H.G. Wells"
+				],
+				"answer": "C.S. Lewis"
+			}
+		}
+	}
+}
