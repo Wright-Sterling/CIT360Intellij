@@ -1,64 +1,55 @@
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-
+import java.util.Random;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class Quiz {
-    private static Map<String, Object> myMap = new HashMap<String, Object>();
-    private static ArrayList<Question> quizQuestions = new ArrayList<Question>();
 
-    public static void readJsonFile(String fname) {
+public class Quiz {
+    private Map<String, Object> myMap = new HashMap<String, Object>();
+    private ArrayList<Question> quizQuestions = new ArrayList<Question>();
+
+    public void readJsonFile(String fname) {
         byte[] mapData = new byte[0];
         try {
             mapData = Files.readAllBytes(Paths.get(fname));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        ObjectMapper objectMapper = new ObjectMapper();
+        ObjectMapper objectMapper = new ObjectMapper(); //Secret sauce!
         try {
             myMap = objectMapper.readValue(mapData, HashMap.class);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("Map is: " + myMap);
-        System.out.println("Keys are: " + myMap.keySet());
-        Object quiz = myMap.get("quiz");
-        HashMap<String, Object> tempmap = (HashMap) quiz;
-//        HashMap<String, Object> tempmap = (HashMap<String, Object>) myMap.get("quiz");
-        for (String key : tempmap.keySet()) {
-            HashMap<String, Object> temp2map = (HashMap) ((HashMap) quiz).get(key);
-            System.out.println("key: " + key + " value: " + temp2map);
-            for (String key2 : temp2map.keySet()) {
-                HashMap<String, Object> temp3map = (HashMap) ((HashMap) temp2map).get(key2);
-                System.out.println("key: " + key2 + " value: " + temp3map);
-                System.out.println("Question: " + temp3map.get("question"));
+        Object quizJson = myMap.get("quiz");
+        /*
+        I gave up trying to reduce the number of casts by refactoring.
+        Time to move on to the next topic.
+        */
+        HashMap<String, Object> quiz = (HashMap) quizJson;
+        for (String key : quiz.keySet()) {
+            HashMap<String, Object> allQuestions = (HashMap) ((HashMap) quizJson).get(key);
+            for (String key2 : allQuestions.keySet()) {
+                HashMap<String, Object> oneQuestion = (HashMap) ((HashMap) allQuestions).get(key2);
                 ArrayList <String> answers;
-                answers = (ArrayList) temp3map.get("options");
-                System.out.println("Options:");
-                for (String temp : answers) {
-                    System.out.println(temp);
-                }
-                System.out.println("Answer: " + temp3map.get("answer"));
+                answers = (ArrayList) oneQuestion.get("options");
                 Question tempQuiz = new Question();
                 tempQuiz.setCategory(key);
-                tempQuiz.setQuestion((String) temp3map.get("question"));
+                tempQuiz.setQuestion((String) oneQuestion.get("question"));
                 tempQuiz.setOptions(answers);
-                tempQuiz.setAnswer((String) temp3map.get("answer"));
+                tempQuiz.setAnswer((String) oneQuestion.get("answer"));
                 quizQuestions.add(tempQuiz);
-                System.out.println("Adding question...");
             }
         }
     }
 
-    public static String getRandomQuestion() {
-        for (Map.Entry<String, Object> entry : myMap.entrySet()) {
-            System.out.println(entry.getKey());// + " = " + entry.getValue());
-        }
-        return "quiz";
+    public Question getRandomQuestion() {
+        Random rand = new Random();
+        int randomQ = rand.nextInt(quizQuestions.size());
+        return quizQuestions.get(randomQ);
     }
 }
