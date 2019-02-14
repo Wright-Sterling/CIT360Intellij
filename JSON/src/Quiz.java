@@ -1,12 +1,10 @@
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
-import java.util.Map.Entry;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -32,7 +30,20 @@ public class Quiz {
         Object tempvar = myMap.get("quiz");
         HashMap<String, String> tempmap = (HashMap) tempvar;
         for (String key : tempmap.keySet()) {
-            System.out.println("key: " + key + " value: " + ((HashMap) tempvar).get(key));
+            HashMap<String, String> temp2map = (HashMap) ((HashMap) tempvar).get(key);
+            System.out.println("key: " + key + " value: " + temp2map);
+            for (String key2 : temp2map.keySet()) {
+                HashMap<String, Object> temp3map = (HashMap) ((HashMap) temp2map).get(key2);
+                System.out.println("key: " + key2 + " value: " + temp3map);
+                System.out.println("Question: " + temp3map.get("question"));
+                ArrayList <String> answers;
+                answers = (ArrayList) temp3map.get("options");
+                System.out.println("Options:");
+                for (String temp : answers) {
+                    System.out.println(temp);
+                }
+                System.out.println("Answer: " + temp3map.get("answer"));
+            }
         }
     }
 
