@@ -9,7 +9,8 @@ import java.util.Map;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Quiz {
-    private static Map<String, String> myMap = new HashMap<String, String>();
+    private static Map<String, Object> myMap = new HashMap<String, Object>();
+    private static ArrayList<Question> quizQuestions = new ArrayList<Question>();
 
     public static void readJsonFile(String fname) {
         byte[] mapData = new byte[0];
@@ -18,7 +19,6 @@ public class Quiz {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        //Map<String, String> myMap = new HashMap<String, String>();
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             myMap = objectMapper.readValue(mapData, HashMap.class);
@@ -27,10 +27,11 @@ public class Quiz {
         }
         System.out.println("Map is: " + myMap);
         System.out.println("Keys are: " + myMap.keySet());
-        Object tempvar = myMap.get("quiz");
-        HashMap<String, String> tempmap = (HashMap) tempvar;
+        Object quiz = myMap.get("quiz");
+        HashMap<String, Object> tempmap = (HashMap) quiz;
+//        HashMap<String, Object> tempmap = (HashMap<String, Object>) myMap.get("quiz");
         for (String key : tempmap.keySet()) {
-            HashMap<String, String> temp2map = (HashMap) ((HashMap) tempvar).get(key);
+            HashMap<String, Object> temp2map = (HashMap) ((HashMap) quiz).get(key);
             System.out.println("key: " + key + " value: " + temp2map);
             for (String key2 : temp2map.keySet()) {
                 HashMap<String, Object> temp3map = (HashMap) ((HashMap) temp2map).get(key2);
@@ -43,14 +44,21 @@ public class Quiz {
                     System.out.println(temp);
                 }
                 System.out.println("Answer: " + temp3map.get("answer"));
+                Question tempQuiz = new Question();
+                tempQuiz.setCategory(key);
+                tempQuiz.setQuestion((String) temp3map.get("question"));
+                tempQuiz.setOptions(answers);
+                tempQuiz.setAnswer((String) temp3map.get("answer"));
+                quizQuestions.add(tempQuiz);
+                System.out.println("Adding question...");
             }
         }
     }
 
     public static String getRandomQuestion() {
-        for (Map.Entry<String, String> entry : myMap.entrySet()) {
+        for (Map.Entry<String, Object> entry : myMap.entrySet()) {
             System.out.println(entry.getKey());// + " = " + entry.getValue());
         }
-        return myMap.get("quiz");
+        return "quiz";
     }
 }
