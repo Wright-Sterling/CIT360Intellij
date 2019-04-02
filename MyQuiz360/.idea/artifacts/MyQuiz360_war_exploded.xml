@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="MyQuiz360:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/MyQuiz360_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="MyQuiz360/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="MyQuiz360" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
