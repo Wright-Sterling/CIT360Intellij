@@ -1,0 +1,402 @@
+/* * is a wildcard referring to all elements. */
+* { margin: 0; box-sizing: border-box; }
+
+body {
+    font-size: 16px;
+    line-height: 32px;
+    font-family: sans-serif;
+    color: black;
+    max-width: 850px;
+}
+
+main {
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-top: 90px;
+}
+
+.header {
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 3;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.header li a {
+    display: block;
+    padding: 10px 10px;
+    color: black;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+    background-color: #f4f4f4;
+}
+
+.header .logo {
+    display: block;
+    color: black;
+    float: left;
+    font-size: 1.5em;
+    padding: 20px 10px;
+    text-decoration: none;
+}
+
+/* menu */
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* menu btn */
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+    max-height: 340px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+@keyframes flash {
+    0% { opacity: 1; }
+    50% { opacity: .1; }
+    100% { opacity: 1; }
+}
+
+@keyframes pulse1 {
+    0% {
+        font-size: 100%;
+    }
+
+    45% {
+        font-size: 150%;
+    }
+
+    100% {
+        font-size: 100%;
+    }
+}
+
+@keyframes pulse2 {
+    0% {
+        font-size: 100%;
+    }
+
+    45% {
+        font-size: 120%;
+    }
+
+    100% {
+        font-size: 100%;
+    }
+}
+
+.lightning {
+    animation-name: flash;
+    animation-duration: .7s;
+    animation-delay: 2s;
+    animation-iteration-count: 40;
+    animation-play-state: running;
+    position: relative;
+    height: 100px;
+}
+
+.game-banner {
+    font-family: 'Bangers', cursive;
+    font-size: 50px;
+    line-height: .8em;
+    display: flex;
+}
+
+.game-small {
+    font-size: 25px;
+    line-height: 1em;
+    margin-left: 15px;
+}
+
+.question-score {
+    font-family: 'Bangers', cursive;
+    font-size: 30px;
+    display: grid;
+    justify-content: start;
+}
+
+.correct-title {
+    font-size: 20px;
+    margin-left: 15px;
+    grid-column: 2;
+}
+
+.correct-title.pulse {
+    animation-name: pulse2;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+.incorrect-title {
+    font-size: 20px;
+    grid-column: 3;
+}
+
+.correct-value {
+    font-size: 20px;
+    margin-left: 15px;
+    grid-column: 2;
+}
+
+.correct-value.pulse {
+    animation-name: pulse1;
+    animation-delay: .5s;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+.incorrect-value {
+    font-size: 20px;
+    grid-column: 3;
+}
+
+.question-button {
+    width: 100px;
+    border-radius: 5px;
+    background-color: lightgray;
+    box-shadow: 2px 4px#888888;
+    text-align: center;
+    font-size: 15px;
+}
+
+#options.show {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .3s linear;
+}
+
+#options.hide {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s .5s, opacity .5s linear;
+}
+
+#answer {
+    display: none;
+}
+#answer.show {
+    display: flex;
+}
+
+canvas {
+    position: absolute;
+}
+canvas.showBorder {
+    border: 1px solid black;
+}
+
+/* 48em = 768px */
+@media (min-width: 48em) {
+    .header li {
+        float: left;
+    }
+    .header li a {
+        padding: 20px 30px;
+    }
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    .header .menu-icon {
+        display: none;
+    }
+
+    .question-button {
+        width: 180px;
+        border-radius: 8px;
+        background-color: lightgray;
+        box-shadow: 3px 5px #888888;
+        font-size:20px;
+        text-align: center;
+    }
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: rgb(105, 105, 105);
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    transition: all 0.2s ease;
+}
+
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+}
+
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.extras-container {
+    display: flex;
+}
+
+.with-space {
+    margin-top: 1.2em
+}
+
+.developer, .about, .settings, .rules {
+    display: none;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 20px;
+    line-height: 1.3em;
+}
+.developer.show {
+    display: block;
+}
+
+.developer-menu {
+    width: 200px;
+}
+
+.developer-menu a {
+    background-color: #eee;
+    color: black;
+    display: block; /* Make the links appear below each other */
+    padding: 12px;
+    text-decoration: none;
+}
+
+.developer-menu a:hover {
+    background-color: #ccc;
+}
+
+.developer-menu a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+.about {
+    display: none;
+}
+.about.show {
+    display: block;
+}
+
+/* removed settings option due to lack of time
+.settings {
+  display: none;
+}
+.settings.show {
+  display: flex;
+}
+*/
+
+.rules {
+    display: none;
+}
+.rules.show {
+    display: block;
+}

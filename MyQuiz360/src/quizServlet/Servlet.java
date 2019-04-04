@@ -1,3 +1,10 @@
+package quizServlet;
+
+import javax.servlet.annotation.WebServlet;
+//import java.io.IOException;
+import java.io.PrintWriter;
+
+/* From hibernate example */
 import org.hibernate.HibernateException;
 import org.hibernate.Metamodel;
 import org.hibernate.query.Query;
@@ -14,7 +21,10 @@ import java.util.Map;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 
-public class Main {
+@WebServlet(name = "Servlet", urlPatterns = ("/Servlet"))
+public class Servlet extends javax.servlet.http.HttpServlet {
+
+    /* From Hibernate example */
     private static final SessionFactory ourSessionFactory;
 
     static {
@@ -32,7 +42,20 @@ public class Main {
         return ourSessionFactory.openSession();
     }
 
-    public static void main(final String[] args) throws Exception {
+    protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
+        PrintWriter out = response.getWriter();
+        response.setContentType("text/html");
+    /*    out.println("<html><head></head><body>"); */
+        String login = request.getParameter("login");
+        String password = request.getParameter("password");
+        out.println("<h1>Super secret login information</h1>");
+        out.println("<p>login: " + login + "</p>");
+        out.println("<p>password: " + password + "</p>");
+    /*    out.println("</body></html>"); */
+    }
+
+    protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
+        /* From Hibernate example */
         Map<String, Object> myMap = new HashMap<String, Object>();
         final Session session = getSession();
         try {
@@ -40,22 +63,33 @@ public class Main {
             final Metamodel metamodel = session.getSessionFactory().getMetamodel();
             for (EntityType<?> entityType : metamodel.getEntities()) {
                 final String entityName = entityType.getName();
-                final Query query = session.createQuery("from " + entityName);
+                final Query query = session.createQuery("FROM " + entityName + " ORDER BY rand()").setMaxResults(1);
                 System.out.println("executing: " + query.getQueryString());
                 for (Object o : query.list()) {
                     QuestionEntity qe = (QuestionEntity) o;
                     System.out.println("Id: " + qe.getId());
-                    System.out.println("Question: " + qe.getQuestion());
+                    // Hibernate example: System.out.println("Question: " + qe.getQuestion());
+                    /* Added to test */
+                    PrintWriter out = response.getWriter();
+                    response.setContentType("text/html");
+                    out.println(qe.getQuestion());
                     ObjectMapper objectMapper = new ObjectMapper(); //Secret sauce!
                     try {
                         myMap = objectMapper.readValue(qe.getQuestion(), HashMap.class);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
+                    out.println(myMap.get(""));
                 }
             }
         } finally {
             session.close();
         }
+        /* End of Hibernate example */
+        /* Resume original Servlet example
+        PrintWriter out = response.getWriter();
+        response.setContentType("text/html");
+        out.println(qe.getQuestion());
+        */
     }
 }
