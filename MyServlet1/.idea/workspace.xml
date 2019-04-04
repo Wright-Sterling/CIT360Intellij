@@ -7,26 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="583342d8-faa2-45fb-a398-698c28cf19ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../MyQuiz360/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyQuiz360/.idea/libraries/com_fasterxml_jackson_core_jackson_annotations_2_9_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyQuiz360/.idea/libraries/com_fasterxml_jackson_core_jackson_core_2_9_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyQuiz360/.idea/libraries/com_fasterxml_jackson_core_jackson_databind_2_9_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyQuiz360/src/quizServlet/Servlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyQuiz360/web/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyQuiz360/web/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyQuiz360/web/normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MyQuiz360/web/quiz.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyQuiz360/src/quizServlet/Question.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JSON/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JSON/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyHibernate/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyHibernate/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyQuiz360/.idea/artifacts/MyQuiz360_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyQuiz360/.idea/artifacts/MyQuiz360_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MyQuiz360/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyQuiz360/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyQuiz360/MyQuiz360.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyQuiz360/MyQuiz360.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyQuiz360/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MyQuiz360/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyQuiz360/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyQuiz360/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MyServlet1_war_exploded/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyServlet1_war_exploded/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyQuiz360/src/quizServlet/Servlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MyQuiz360/src/quizServlet/Servlet.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

@@ -76,10 +76,16 @@ public class Servlet extends javax.servlet.http.HttpServlet {
                     ObjectMapper objectMapper = new ObjectMapper(); //Secret sauce!
                     try {
                         myMap = objectMapper.readValue(qe.getQuestion(), HashMap.class);
+                        Question question = objectMapper.readValue(qe.getQuestion(), Question.class);
+                        /*
+                        out.println("Question object: " + question);
+                        out.println("Question attribute: " + question.getQuestion());
+                         */
+                        request.setAttribute("question", question.getQuestion());
+                        request.getRequestDispatcher("index.jsp").forward(request, response);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    out.println(myMap.get(""));
                 }
             }
         } finally {
