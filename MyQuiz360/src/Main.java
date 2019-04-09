@@ -11,6 +11,8 @@ import javax.persistence.metamodel.EntityType;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import quizDbPopulator.OpentdbPopulator;
 
@@ -34,7 +36,35 @@ public class Main {
     }
 
     public static void main(final String[] args) throws Exception {
-        Map<String, Object> myMap = new HashMap<String, Object>();
+        Scanner in = new Scanner(System.in);
+        int option = 0;
+        while(option != 4) {
+            System.out.println("Lightning Quiz Admin");
+            System.out.println("Menu:");
+            System.out.println("1) Display all database rows");
+            System.out.println("2) Erase all database rows");
+            System.out.println("3) Repopulate database from web service");
+            System.out.println("4) Exit admin system");
+
+            option = in.nextInt();
+
+            switch(option) {
+                case 1:
+                    dumpDatabase();
+                    break;
+                case 2:
+                    clearDatabase();
+                    break;
+                case 3:
+                    fillDatabase();
+                    break;
+                default:
+                    System.out.println("Please enter a valid integer option.");
+            }
+        }
+    }
+
+    private static void dumpDatabase() {
         final Session session = getSession();
         try {
             System.out.println("querying all the managed entities...");
@@ -50,20 +80,38 @@ public class Main {
                     ObjectMapper objectMapper = new ObjectMapper(); //Secret sauce!
                 }
             }
-            session.beginTransaction();
-            final Query query2 = session.createNativeQuery("delete from question");
-            int deletedCount = query2.executeUpdate();
-            session.getTransaction().commit();
-            System.out.println("Records deleted: "+deletedCount);
         } finally {
             session.close();
         }
+    }
 
-        //Populator populator = new Populator();
+    private static void clearDatabase() {
+        final Session session = getSession();
+        try {
+            System.out.println("deleting all records...");
+            session.beginTransaction();
+            final Query query = session.createNativeQuery("delete from question");
+            int deletedCount = query.executeUpdate();
+            session.getTransaction().commit();
+            System.out.println("..." + deletedCount + "records deleted.");
+        } finally {
+            session.close();
+        }
+    }
+
+    private static void fillDatabase() {
         OpentdbPopulator populator = new OpentdbPopulator();
-        //int junk = populator.databaseClear();
-        populator.setQuestions(2);
-        populator.setCategory(9);
+        Scanner in = new Scanner(System.in);
+        System.out.print("Category (0,9-32):");
+        int cat = in.nextInt();
+        System.out.println("");
+        System.out.print("Number of questions (1-50):");
+        int qs = in.nextInt();
+        System.out.println("");
+        System.out.println("Populating database...");
+
+        populator.setQuestions(qs);
+        populator.setCategory(cat);
         String results = populator.startRequest();
         System.out.println("Populator finished.");
         System.out.println("Results from Populator: " + results);

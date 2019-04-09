@@ -9,10 +9,8 @@
     <list default="true" id="7e17623c-5833-4f6a-8af7-f35afc965eca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../JSON/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JSON/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyHibernate/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyHibernate/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quizDbPopulator/OpentdbPopulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizDbPopulator/OpentdbPopulator.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,7 +75,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/quizDbPopulator/OpentdbPopulator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="124">
@@ -138,16 +136,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="35" selection-start-line="18" selection-end-line="35" />
+            <state relative-caret-position="325">
+              <caret line="113" column="35" lean-forward="true" selection-start-line="113" selection-start-column="35" selection-end-line="113" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#0#17#1" expanded="true" />
-                <element signature="e#0#20#1" expanded="true" />
-                <element signature="e#0#13#1" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -222,8 +218,8 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/src/quizDbPopulator/Populator.java" />
         <option value="$PROJECT_DIR$/src/quizDbPopulator/QuizReader.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/quizDbPopulator/OpentdbPopulator.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -496,7 +492,7 @@
       <workItem from="1554249868173" duration="2561000" />
       <workItem from="1554299282793" duration="9961000" />
       <workItem from="1554389866965" duration="10810000" />
-      <workItem from="1554732498207" duration="36183000" />
+      <workItem from="1554732498207" duration="39866000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/Wright-Sterling/CIT360Intellij&#10;&#10;# Conflicts:&#10;#&#9;MyHibernate/.idea/dataSources/7ac51154-e7c8-4b7f-a24c-2c391e50a2b1.xml&#10;#&#9;MyHibernate/.idea/workspace.xml&#10;#&#9;MyServlet1/.idea/workspace.xml">
       <created>1554212202071</created>
@@ -526,29 +522,36 @@
       <option name="project" value="LOCAL" />
       <updated>1554768931041</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Clearing database and adding records from web service">
+      <created>1554820235205</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1554820235205</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77286000" />
+    <option name="totallyTimeSpent" value="80969000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4918919" visible="true" weight="0.19509594" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4914611" visible="true" weight="0.19509594" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Persistence" order="2" sideWeight="0.5009009" side_tool="true" weight="0.18453333" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
-      <window_info id="Web" order="7" sideWeight="0.5081081" side_tool="true" visible="true" weight="0.19509594" />
+      <window_info id="Web" order="7" sideWeight="0.5085389" side_tool="true" visible="true" weight="0.19509594" />
       <window_info id="Image Layers" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4992" weight="0.42903575" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49973333" visible="true" weight="0.39869988" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4992" visible="true" weight="0.42903575" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49973333" weight="0.39869988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -622,7 +625,8 @@
     <MESSAGE value="Servlet reads data through Hibernate for the first time." />
     <MESSAGE value="Servlet sends question which ends up in proper div on index.jsp" />
     <MESSAGE value="Retrieving data from web service and parsing for database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Retrieving data from web service and parsing for database" />
+    <MESSAGE value="Clearing database and adding records from web service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clearing database and adding records from web service" />
   </component>
   <component name="editorHistoryManager">
     <entry file="das://57367fd7-254c-4a8e-96f3-ed5bc3cef3e5/schema/hibernate/table/inventory" />
@@ -748,30 +752,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://57367fd7-254c-4a8e-96f3-ed5bc3cef3e5/schema/hibernate/table/question">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="35" selection-start-line="18" selection-end-line="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#0#17#1" expanded="true" />
-            <element signature="e#0#20#1" expanded="true" />
-            <element signature="e#0#13#1" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -810,6 +794,24 @@
             <element signature="e#6809#6810#0" expanded="true" />
             <element signature="e#6856#6857#0" expanded="true" />
             <element signature="e#6900#6901#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://57367fd7-254c-4a8e-96f3-ed5bc3cef3e5/schema/hibernate/table/question">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="113" column="35" lean-forward="true" selection-start-line="113" selection-start-column="35" selection-end-line="113" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#0#17#1" expanded="true" />
           </folding>
         </state>
       </provider>
