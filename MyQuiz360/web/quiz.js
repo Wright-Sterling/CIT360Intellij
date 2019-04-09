@@ -127,7 +127,7 @@ function showAnswer() {
 }
 
 function displayQuestion(nextQuestion) {
-    var strOptions = ""
+    var strOptions = "";
     var qQuest = question.question;
     var qOpts = question.incorrect_answers;
     qOpts.push(question.correct_answer);
@@ -162,7 +162,7 @@ function getAnswer(answer) {
         offsetLeft: optionsID.offsetLeft,
         offsetHeight: optionsID.offsetHeight,
         offsetWidth: optionsID.offsetWidth
-    }
+    };
     canvas.top = optionsArea.offsetTop+"px";
     canvas.style.left = optionsArea.offsetLeft+"px";
     canvas.height = optionsArea.offsetHeight;

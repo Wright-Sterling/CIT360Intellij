@@ -16,6 +16,8 @@ import quiz360.QuestionEntity;
 import javax.persistence.metamodel.EntityType;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -81,6 +83,9 @@ public class Servlet extends javax.servlet.http.HttpServlet {
                         out.println("Question object: " + question);
                         out.println("Question attribute: " + question.getQuestion());
                          */
+                        ArrayList qOpts = question.getIncorrect_answers();
+                        String strOptions = shuffleOptions(qOpts, question.getCorrect_answer());
+                        request.setAttribute("options", strOptions);
                         request.setAttribute("question", question.getQuestion());
                         request.getRequestDispatcher("index.jsp").forward(request, response);
                     } catch (IOException e) {
@@ -91,11 +96,21 @@ public class Servlet extends javax.servlet.http.HttpServlet {
         } finally {
             session.close();
         }
-        /* End of Hibernate example */
-        /* Resume original Servlet example
-        PrintWriter out = response.getWriter();
-        response.setContentType("text/html");
-        out.println(qe.getQuestion());
-        */
+    }
+
+    private String shuffleOptions(ArrayList wrong, String right) {
+        String options = "";
+        ArrayList shuffled = wrong;
+        shuffled.add(right);
+        Collections.shuffle(shuffled);
+        for (int i = 0; i < shuffled.size(); i++) {
+            options = options +
+                    "<p>"+
+                    "<input type='radio' id='option"+i+"' name='radio-group'"+
+                    "onclick='getAnswer(this.id)'>"+
+                    "<label for='option"+i+"'>"+shuffled.get(i)+"</label>"+
+                    "</p>";
+        }
+        return options;
     }
 }

@@ -204,10 +204,10 @@ public class OpentdbPopulator {
 
     private String buildUrl() {
         String tempUrl = OPENTDB_BASE_URL;
-        tempUrl += this.questions > 0 ? "amount=" + this.questions : "amount=0"; // fail and return nothing
-        tempUrl += this.category > 0 ? "&category=" + this.category : ""; // leave blank and return random
-        tempUrl += this.difficulty != "" ? "&difficulty=" + this.difficulty : ""; // leave blank and return random
-        tempUrl += this.type != "" ? "&type=" + this.type : ""; //leave blank and return random
+        tempUrl += questions > 0 ? "amount=" + questions : "amount=0"; // fail and return nothing
+        tempUrl += category > 0 ? "&category=" + category : ""; // leave blank and return random
+        tempUrl += difficulty != "" ? "&difficulty=" + difficulty : ""; // leave blank and return random
+        tempUrl += type != "" ? "&type=" + type : ""; //leave blank and return random
         return tempUrl;
     }
 

@@ -8,12 +8,8 @@ import quiz360.QuestionEntity;
 
 import javax.persistence.metamodel.EntityType;
 
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import quizDbPopulator.OpentdbPopulator;
 
 
@@ -77,7 +73,6 @@ public class Main {
                     QuestionEntity qe = (QuestionEntity) o;
                     System.out.println("Id: " + qe.getId());
                     System.out.println("Question: " + qe.getQuestion());
-                    ObjectMapper objectMapper = new ObjectMapper(); //Secret sauce!
                 }
             }
         } finally {
@@ -104,14 +99,14 @@ public class Main {
         Scanner in = new Scanner(System.in);
         System.out.print("Category (0,9-32):");
         int cat = in.nextInt();
-        System.out.println("");
+        System.out.println();
         System.out.print("Number of questions (1-50):");
         int qs = in.nextInt();
-        System.out.println("");
+        System.out.println();
         System.out.println("Populating database...");
 
-        populator.setQuestions(qs);
-        populator.setCategory(cat);
+        OpentdbPopulator.setQuestions(qs);
+        OpentdbPopulator.setCategory(cat);
         String results = populator.startRequest();
         System.out.println("Populator finished.");
         System.out.println("Results from Populator: " + results);
