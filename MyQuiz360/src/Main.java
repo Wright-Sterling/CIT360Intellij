@@ -48,20 +48,20 @@ public class Main {
                     System.out.println("Id: " + qe.getId());
                     System.out.println("Question: " + qe.getQuestion());
                     ObjectMapper objectMapper = new ObjectMapper(); //Secret sauce!
-                    try {
-                        myMap = objectMapper.readValue(qe.getQuestion(), HashMap.class);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
                 }
             }
+            session.beginTransaction();
+            final Query query2 = session.createNativeQuery("delete from question");
+            int deletedCount = query2.executeUpdate();
+            session.getTransaction().commit();
+            System.out.println("Records deleted: "+deletedCount);
         } finally {
             session.close();
         }
 
         //Populator populator = new Populator();
         OpentdbPopulator populator = new OpentdbPopulator();
-        int junk = populator.databaseClear();
+        //int junk = populator.databaseClear();
         populator.setQuestions(2);
         populator.setCategory(9);
         String results = populator.startRequest();

@@ -10,8 +10,10 @@ import org.hibernate.HibernateException;
 import org.hibernate.Metamodel;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
+import org.hibernate.service.ServiceRegistry;
 import quiz360.QuestionEntity;
 import quizServlet.Question;
 
@@ -21,9 +23,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.concurrent.CountDownLatch;
+import java.util.logging.Logger;
 
 public class OpentdbPopulator {
-
     private static final String OPENTDB_BASE_URL = "https://opentdb.com/api.php?";
     private static final String OPENTDB_DEFAULT_PARAMETERS = "amount=1"; //return 1 question from any category
     private static final String OPENTDB_DEFAULT_URL = OPENTDB_BASE_URL + OPENTDB_DEFAULT_PARAMETERS;
@@ -31,6 +33,68 @@ public class OpentdbPopulator {
     private static int category = 0; // 9 - 32
     private static String difficulty = ""; // "easy", "medium", "hard"
     private static String type = ""; // "boolean", "multiple"
+
+    private static final SessionFactory ourSessionFactory;
+
+    static {
+        try {
+            Configuration configuration = new Configuration();
+            configuration.configure();
+
+            ourSessionFactory = configuration.buildSessionFactory();
+        } catch (Throwable ex) {
+            throw new ExceptionInInitializerError(ex);
+        }
+    }
+
+    public static Session getSession() throws HibernateException {
+        return ourSessionFactory.openSession();
+    }
+
+    static Session sessionObj;
+    /*static Session sessionObj;
+    static SessionFactory sessionFactoryObj;
+
+    // This Method Is Used To Create The Hibernate's SessionFactory Object
+    private static SessionFactory buildSessionFactory() {
+        // Creating Configuration Instance & Passing Hibernate Configuration File
+        Configuration configObj = new Configuration();
+        configObj.configure("hibernate.cfg.xml");
+
+        // Since Hibernate Version 4.x, ServiceRegistry Is Being Used
+        ServiceRegistry serviceRegistryObj = new StandardServiceRegistryBuilder().applySettings(configObj.getProperties()).build();
+
+        // Creating Hibernate SessionFactory Instance
+        sessionFactoryObj = configObj.buildSessionFactory(serviceRegistryObj);
+        return sessionFactoryObj;
+    }
+*/
+    // Method 1: This Method Used To Create A New Student Record In The Database Table
+    public static void createRecord(String jsonText) {
+        QuestionEntity question = new QuestionEntity();
+        try {
+            // Getting Session Object From SessionFactory
+            sessionObj = getSession();
+            // Getting Transaction Object From Session Object
+            sessionObj.beginTransaction();
+
+            question.setQuestion(jsonText);
+                sessionObj.save(question);
+
+            // Committing The Transactions To The Database
+            sessionObj.getTransaction().commit();
+        } catch(Exception sqlException) {
+            if(null != sessionObj.getTransaction()) {
+                System.out.println(".......Transaction Is Being Rolled Back.......");
+                sessionObj.getTransaction().rollback();
+            }
+            sqlException.printStackTrace();
+        } finally {
+            if(sessionObj != null) {
+                sessionObj.close();
+            }
+        }
+    }
 
     public OpentdbPopulator() {
         OpentdbPopulator.questions = 1; // Grab a question from any category
@@ -159,6 +223,7 @@ public class OpentdbPopulator {
                 end = i;
                 oneRecord = "{" + JsonText.substring(start + 1, end) + "}"; // value between start and end
                 System.out.println("Record: " + oneRecord);
+                createRecord(oneRecord);
             }
         }
         return true;
