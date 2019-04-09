@@ -75,7 +75,7 @@ public class Servlet extends javax.servlet.http.HttpServlet {
                     out.println(qe.getQuestion());
                     ObjectMapper objectMapper = new ObjectMapper(); //Secret sauce!
                     try {
-                        myMap = objectMapper.readValue(qe.getQuestion(), HashMap.class);
+                        //myMap = objectMapper.readValue(qe.getQuestion(), HashMap.class);
                         Question question = objectMapper.readValue(qe.getQuestion(), Question.class);
                         /*
                         out.println("Question object: " + question);

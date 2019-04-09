@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import quizDbPopulator.OpentdbPopulator;
 
 
 public class Main {
@@ -57,5 +58,14 @@ public class Main {
         } finally {
             session.close();
         }
+
+        //Populator populator = new Populator();
+        OpentdbPopulator populator = new OpentdbPopulator();
+        int junk = populator.databaseClear();
+        populator.setQuestions(2);
+        populator.setCategory(9);
+        String results = populator.startRequest();
+        System.out.println("Populator finished.");
+        System.out.println("Results from Populator: " + results);
     }
 }
