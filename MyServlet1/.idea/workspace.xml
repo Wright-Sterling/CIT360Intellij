@@ -9,8 +9,9 @@
     <list default="true" id="583342d8-faa2-45fb-a398-698c28cf19ea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../JSON/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JSON/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyHibernate/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyHibernate/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyQuiz360/src/quizServlet/Servlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MyQuiz360/src/quizServlet/Servlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyQuiz360/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyQuiz360/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyQuiz360/web/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../MyQuiz360/web/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyQuiz360/web/quiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/../MyQuiz360/web/quiz.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -290,12 +291,12 @@
       <workItem from="1554389884184" duration="1918000" />
       <workItem from="1554414258328" duration="253000" />
       <workItem from="1554414993885" duration="30000" />
-      <workItem from="1554916297642" duration="273000" />
+      <workItem from="1554916297642" duration="604000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22784000" />
+    <option name="totallyTimeSpent" value="23115000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />

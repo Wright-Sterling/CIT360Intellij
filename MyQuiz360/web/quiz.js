@@ -1,47 +1,13 @@
-var xmlhttp = new XMLHttpRequest();
-var url = "https://opentdb.com/api.php?amount=10";
-var supportLocalStorage = true;
-var quizArray = "";
-var upNext = 0;
-var question = "";
-var shuffledOptions = "";
-var correctAnswer = "";
-var showingAnswer = false;
 var runningScore = 0; // store and retrieve from local storage
 var questionValue = 0; // will be updated to match difficulty
 var newValue = 0;
 var qButton = document.getElementsByClassName("question-button")[0];
 var buttonText = ["Ready...", "Set...", "Go!"];
-var buttonTexts = buttonText.length;
-var textPointer = 0;
 var downloadTimer = null;
 var canvas =  document.querySelector("canvas");
 var ctx = canvas.getContext("2d");
 
-init();
 updateRunningScore();
-
-function init() {
-    xmlhttp.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200) {
-            quizArray = JSON.parse(this.responseText);
-        }
-    };
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();
-
-    if (typeof (Storage) === "undefined") {
-        alert("Your browser does not support local storage. Your score will not persist between sessions.");
-        supportLocalStorage = false;
-    }
-
-    if (supportLocalStorage) {
-        runningScore = parseInt(localStorage.runningScore);
-        if (isNaN(runningScore)) {
-            runningScore = 0;
-        }
-    }
-}
 
 function updateRunningScore() {
     if (runningScore <0) runningScore = 0;
@@ -183,54 +149,4 @@ function getAnswer(answer) {
     optionsID.className="hide";
     qButton.innerHTML="New Question";
     updateRunningScore();
-}
-
-function showDeveloper() {
-    var sec=document.querySelector(".developer");
-    if(sec.classList.contains("show")) {
-        sec.classList.remove("show");
-    } else {
-        sec.classList.add("show");
-    }
-}
-
-function showAbout() {
-    var sec=document.querySelector(".about");
-    if(sec.classList.contains("show")) {
-        sec.classList.remove("show");
-    } else {
-        sec.classList.add("show");
-    }
-}
-
-/* removed settings option due to lack of time
-function showSettings() {
-    var sec=document.querySelector(".settings");
-    if(sec.classList.contains("show")) {
-        sec.classList.remove("show");
-    } else {
-        sec.classList.add("show");
-    }
-}
-*/
-
-function showRules() {
-    var sec=document.querySelector(".rules");
-    if(sec.classList.contains("show")) {
-        sec.classList.remove("show");
-    } else {
-        sec.classList.add("show");
-    }
-}
-
-function clearStorage() {
-    localStorage.clear();
-}
-
-function showBorder() {
-    if(canvas.classList.contains("showBorder")) {
-        canvas.classList.remove("showBorder");
-    }else {
-        canvas.classList.add("showBorder");
-    }
 }
