@@ -66,6 +66,8 @@ public class Servlet extends javax.servlet.http.HttpServlet {
                         request.setAttribute("options", strOptions);
                         request.setAttribute("question", question.getQuestion());
                         request.setAttribute("category", question.getCategory());
+                        request.setAttribute("correct_value", question.getCorrectValue());
+                        request.setAttribute("incorrect_value", question.getIncorrectValue());
                         request.getRequestDispatcher("index.jsp").forward(request, response);
                     } catch (IOException e) {
                         e.printStackTrace();

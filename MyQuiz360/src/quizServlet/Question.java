@@ -6,6 +6,8 @@ public class Question {
     private String category;
     private String type;
     private String difficulty;
+    private String correctValue;
+    private String incorrectValue;
     private int value;
     private String question;
     private ArrayList incorrect_answers;
@@ -35,7 +37,7 @@ public class Question {
         this.difficulty = difficulty;
     }
 
-    public int getValue() {
+    public String getCorrectValue() {
         switch(difficulty) {
             case "easy":
                 value = 400;
@@ -49,7 +51,12 @@ public class Question {
             default:
                 value = 200; // handle unexpected values of difficulty
         }
-        return value;
+        return String.valueOf(value);
+    }
+
+    public String getIncorrectValue() {
+        int correct = Integer.parseInt(this.getCorrectValue());
+        return (String.valueOf((int)(correct - correct*1.5)));
     }
 
     public String getQuestion() {
