@@ -4,13 +4,10 @@ import org.hibernate.query.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import quiz360.QuestionEntity;
-
 import javax.persistence.metamodel.EntityType;
-
 import java.util.Scanner;
-
 import quizDbPopulator.OpentdbPopulator;
+import quiz360.QuestionEntity;
 
 
 public class Main {
@@ -31,7 +28,7 @@ public class Main {
         return ourSessionFactory.openSession();
     }
 
-    public static void main(final String[] args) throws Exception {
+    public static void main(final String[] args) {
         Scanner in = new Scanner(System.in);
         int option = 0;
         while(option != 4) {
@@ -43,7 +40,6 @@ public class Main {
             System.out.println("4) Exit admin system");
 
             option = in.nextInt();
-
             switch(option) {
                 case 1:
                     dumpDatabase();
@@ -54,6 +50,8 @@ public class Main {
                 case 3:
                     fillDatabase();
                     break;
+                case 4:
+                    return;
                 default:
                     System.out.println("Please enter a valid integer option.");
             }
@@ -61,7 +59,7 @@ public class Main {
     }
 
     private static void dumpDatabase() {
-        final Session session = getSession();
+        Session session = getSession();
         try {
             System.out.println("querying all the managed entities...");
             final Metamodel metamodel = session.getSessionFactory().getMetamodel();
@@ -103,8 +101,8 @@ public class Main {
         System.out.print("Number of questions (1-50):");
         int qs = in.nextInt();
         System.out.println();
-        System.out.println("Populating database...");
 
+        System.out.println("Populating database...");
         OpentdbPopulator.setQuestions(qs);
         OpentdbPopulator.setCategory(cat);
         String results = populator.startRequest();
