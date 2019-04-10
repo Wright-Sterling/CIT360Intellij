@@ -6,6 +6,7 @@ public class Question {
     private String category;
     private String type;
     private String difficulty;
+    private int value;
     private String question;
     private ArrayList incorrect_answers;
     private String correct_answer;
@@ -32,6 +33,23 @@ public class Question {
 
     public void setDifficulty(String difficulty) {
         this.difficulty = difficulty;
+    }
+
+    public int getValue() {
+        switch(difficulty) {
+            case "easy":
+                value = 400;
+                break;
+            case "medium":
+                value = 600;
+                break;
+            case "hard":
+                value = 1000;
+                break;
+            default:
+                value = 200; // handle unexpected values of difficulty
+        }
+        return value;
     }
 
     public String getQuestion() {

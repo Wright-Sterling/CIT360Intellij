@@ -65,6 +65,7 @@ public class Servlet extends javax.servlet.http.HttpServlet {
                         String strOptions = shuffleOptions(qOpts, question.getCorrect_answer());
                         request.setAttribute("options", strOptions);
                         request.setAttribute("question", question.getQuestion());
+                        request.setAttribute("category", question.getCategory());
                         request.getRequestDispatcher("index.jsp").forward(request, response);
                     } catch (IOException e) {
                         e.printStackTrace();

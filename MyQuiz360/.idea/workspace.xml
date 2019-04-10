@@ -10,8 +10,8 @@
       <change beforePath="$PROJECT_DIR$/../JSON/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JSON/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/quiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/quiz.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quizServlet/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizServlet/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quizServlet/Servlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizServlet/Servlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MyServlet1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyServlet1/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -66,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-151">
-              <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+            <state relative-caret-position="333">
+              <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -75,13 +75,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/quiz.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3322">
-              <caret line="151" column="1" selection-start-line="151" selection-start-column="1" selection-end-line="151" selection-end-column="1" />
+            <state relative-caret-position="440">
+              <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/main.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="5236">
@@ -93,10 +93,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/quizServlet/Servlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="352">
+              <caret line="67" column="81" selection-start-line="67" selection-start-column="81" selection-end-line="67" selection-end-column="81" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#0#33#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/quizServlet/Question.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="303">
+              <caret line="49" column="70" selection-start-line="49" selection-start-column="70" selection-end-line="49" selection-end-column="70" />
+              <folding>
+                <element signature="e#669#670#0" expanded="true" />
+                <element signature="e#713#714#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -114,8 +128,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="85" column="59" selection-start-line="85" selection-start-column="59" selection-end-line="85" selection-end-column="59" />
+            <state relative-caret-position="457">
+              <caret line="56" column="13" lean-forward="true" selection-start-line="42" selection-start-column="1" selection-end-line="56" selection-end-column="13" />
               <folding>
                 <element signature="e#0#17#1" expanded="true" />
               </folding>
@@ -148,16 +162,16 @@
         <option value="$PROJECT_DIR$/src/quiz360/QuestionEntity.java" />
         <option value="$PROJECT_DIR$/web/normalize.css" />
         <option value="$PROJECT_DIR$/web/login.html" />
-        <option value="$PROJECT_DIR$/src/quizServlet/Question.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/src/quizDbPopulator/Populator.java" />
         <option value="$PROJECT_DIR$/src/quizDbPopulator/QuizReader.java" />
         <option value="$PROJECT_DIR$/src/quizDbPopulator/OpentdbPopulator.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/quizServlet/Servlet.java" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/quiz.js" />
         <option value="$PROJECT_DIR$/web/main.css" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/src/quizServlet/Servlet.java" />
+        <option value="$PROJECT_DIR$/src/quizServlet/Question.java" />
       </list>
     </option>
   </component>
@@ -432,7 +446,7 @@
       <workItem from="1554299282793" duration="9961000" />
       <workItem from="1554389866965" duration="10810000" />
       <workItem from="1554732498207" duration="45803000" />
-      <workItem from="1554915140990" duration="2664000" />
+      <workItem from="1554915140990" duration="6100000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/Wright-Sterling/CIT360Intellij&#10;&#10;# Conflicts:&#10;#&#9;MyHibernate/.idea/dataSources/7ac51154-e7c8-4b7f-a24c-2c391e50a2b1.xml&#10;#&#9;MyHibernate/.idea/workspace.xml&#10;#&#9;MyServlet1/.idea/workspace.xml">
       <created>1554212202071</created>
@@ -497,11 +511,18 @@
       <option name="project" value="LOCAL" />
       <updated>1554916754830</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Cleaned up index.jsp and associated .js and .css files">
+      <created>1554917924998</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1554917924998</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89570000" />
+    <option name="totallyTimeSpent" value="93006000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -514,8 +535,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4914611" visible="true" weight="0.19722815" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4914611" visible="true" weight="0.19722815" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Persistence" order="2" sideWeight="0.5009009" side_tool="true" weight="0.18453333" />
       <window_info id="Designer" order="3" />
@@ -546,7 +568,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info active="true" anchor="right" id="Database" order="5" visible="true" weight="0.16044776" />
+      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.16044776" />
       <window_info anchor="right" id="Maven" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
@@ -606,7 +628,8 @@
     <MESSAGE value="Servlet returns shuffled options as html formatted string" />
     <MESSAGE value="Main() cleaned up and fixed exit option on menu" />
     <MESSAGE value="Cleaned up Servlet.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up Servlet.java" />
+    <MESSAGE value="Cleaned up index.jsp and associated .js and .css files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up index.jsp and associated .js and .css files" />
   </component>
   <component name="editorHistoryManager">
     <entry file="das://57367fd7-254c-4a8e-96f3-ed5bc3cef3e5/schema/hibernate/table/inventory" />
@@ -634,17 +657,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MyQuiz360.iml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/quizServlet/Question.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
-          <folding>
-            <element signature="e#669#670#0" expanded="true" />
-            <element signature="e#713#714#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/quizDbPopulator/Populator.java" />
     <entry file="file://$PROJECT_DIR$/src/quizDbPopulator/QuizReader.java" />
@@ -721,16 +733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="85" column="59" selection-start-line="85" selection-start-column="59" selection-end-line="85" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#17#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/quiz360/QuestionEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -748,34 +750,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/quizServlet/Servlet.java">
+    <entry file="file://$PROJECT_DIR$/web/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#33#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-151">
-          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        <state relative-caret-position="5236">
+          <caret line="238" column="1" selection-start-line="238" selection-start-column="1" selection-end-line="238" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/quiz.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3322">
-          <caret line="151" column="1" selection-start-line="151" selection-start-column="1" selection-end-line="151" selection-end-column="1" />
+        <state relative-caret-position="440">
+          <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/main.css">
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5236">
-          <caret line="238" column="1" selection-start-line="238" selection-start-column="1" selection-end-line="238" selection-end-column="1" />
+        <state relative-caret-position="333">
+          <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quizServlet/Servlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="67" column="81" selection-start-line="67" selection-start-column="81" selection-end-line="67" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#0#33#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="56" column="13" lean-forward="true" selection-start-line="42" selection-start-column="1" selection-end-line="56" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#17#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/quizServlet/Question.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="49" column="70" selection-start-line="49" selection-start-column="70" selection-end-line="49" selection-end-column="70" />
+          <folding>
+            <element signature="e#669#670#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
