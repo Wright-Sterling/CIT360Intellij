@@ -144,10 +144,10 @@ main {
     transition: visibility 0s .5s, opacity .5s linear;
 }
 
-#answer {
+.answer {
     display: none;
 }
-#answer.show {
+.answer.show {
     display: flex;
 }
 

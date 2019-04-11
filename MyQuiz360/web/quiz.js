@@ -135,7 +135,7 @@ function getAnswer(answer) {
     var ctx = canvas.getContext("2d");
     ctx.font = "30px Arial";
     ctx.textAlign = "center";
-    if (shuffledOptions[numAnswer] == question.correct_answer) {
+    if (selectedLabel.innerHTML == document.querySelector(".answer").innerHTML) {
         selectedLabel.style.color = "green";
         ctx.fillStyle = "green";
         ctx.fillText("CORRECT!", canvas.width/2, canvas.height/2);

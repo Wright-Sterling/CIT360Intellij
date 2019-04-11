@@ -64,6 +64,8 @@ public class Servlet extends javax.servlet.http.HttpServlet {
                         ArrayList qOpts = question.getIncorrect_answers();
                         String strOptions = shuffleOptions(qOpts, question.getCorrect_answer());
                         request.setAttribute("options", strOptions);
+                        System.out.println("Correct Answer: "+ question.getCorrect_answer());
+                        request.setAttribute("correct_answer", question.getCorrect_answer());
                         request.setAttribute("question", question.getQuestion());
                         request.setAttribute("category", question.getCategory());
                         request.setAttribute("correct_value", question.getCorrectValue());
