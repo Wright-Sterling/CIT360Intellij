@@ -30,34 +30,6 @@ main {
     100% { opacity: 1; }
 }
 
-@keyframes pulse1 {
-    0% {
-        font-size: 100%;
-    }
-
-    45% {
-        font-size: 150%;
-    }
-
-    100% {
-        font-size: 100%;
-    }
-}
-
-@keyframes pulse2 {
-    0% {
-        font-size: 100%;
-    }
-
-    45% {
-        font-size: 120%;
-    }
-
-    100% {
-        font-size: 100%;
-    }
-}
-
 .lightning {
     animation-name: flash;
     animation-duration: .7s;

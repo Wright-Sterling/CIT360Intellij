@@ -1,34 +1,23 @@
 package quizDbPopulator;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.concurrent.FutureCallback;
 import org.apache.http.impl.nio.client.CloseableHttpAsyncClient;
 import org.apache.http.impl.nio.client.HttpAsyncClients;
 import org.hibernate.HibernateException;
-import org.hibernate.Metamodel;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.query.Query;
-import org.hibernate.service.ServiceRegistry;
-import quiz360.QuestionEntity;
-import quizServlet.Question;
-
-import javax.persistence.metamodel.EntityType;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.util.concurrent.CountDownLatch;
-import java.util.logging.Logger;
+import quiz360.QuestionEntity;
 
 public class OpentdbPopulator {
     private static final String OPENTDB_BASE_URL = "https://opentdb.com/api.php?";
     private static final String OPENTDB_DEFAULT_PARAMETERS = "amount=1"; //return 1 question from any category
-    private static final String OPENTDB_DEFAULT_URL = OPENTDB_BASE_URL + OPENTDB_DEFAULT_PARAMETERS;
     private static int questions = 0; // 1 - 50
     private static int category = 0; // 9 - 32
     private static String difficulty = ""; // "easy", "medium", "hard"
@@ -52,24 +41,7 @@ public class OpentdbPopulator {
     }
 
     static Session sessionObj;
-    /*static Session sessionObj;
-    static SessionFactory sessionFactoryObj;
 
-    // This Method Is Used To Create The Hibernate's SessionFactory Object
-    private static SessionFactory buildSessionFactory() {
-        // Creating Configuration Instance & Passing Hibernate Configuration File
-        Configuration configObj = new Configuration();
-        configObj.configure("hibernate.cfg.xml");
-
-        // Since Hibernate Version 4.x, ServiceRegistry Is Being Used
-        ServiceRegistry serviceRegistryObj = new StandardServiceRegistryBuilder().applySettings(configObj.getProperties()).build();
-
-        // Creating Hibernate SessionFactory Instance
-        sessionFactoryObj = configObj.buildSessionFactory(serviceRegistryObj);
-        return sessionFactoryObj;
-    }
-*/
-    // Method 1: This Method Used To Create A New Student Record In The Database Table
     public static void createRecord(String jsonText) {
         QuestionEntity question = new QuestionEntity();
         try {
@@ -118,7 +90,6 @@ public class OpentdbPopulator {
             httpclient.execute(request, new FutureCallback<HttpResponse>() {
                 public void completed(final HttpResponse response) {
                     latch1.countDown();
-                    //System.out.println(request.getRequestLine() + "->" + response.getStatusLine());
                     if (response.getStatusLine().getStatusCode() != 200) {
                         throw new RuntimeException("Failed : HTTP error code : "
                                 + response.getStatusLine().getStatusCode());
