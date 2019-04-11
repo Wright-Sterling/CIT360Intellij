@@ -45,20 +45,16 @@ public class Servlet extends javax.servlet.http.HttpServlet {
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         final Session session = getSession();
         try {
-            System.out.println("querying all the managed entities...");
             final Metamodel metamodel = session.getSessionFactory().getMetamodel();
             for (EntityType<?> entityType : metamodel.getEntities()) {
                 final String entityName = entityType.getName();
                 final Query query = session.createQuery("FROM " + entityName + " ORDER BY rand()").setMaxResults(1);
-                System.out.println("executing: " + query.getQueryString());
                 for (Object o : query.list()) {
                     QuestionEntity qe = (QuestionEntity) o;
-                    System.out.println("Id: " + qe.getId());
-                    /* Added to test */
                     PrintWriter out = response.getWriter();
                     response.setContentType("text/html");
                     out.println(qe.getQuestion());
-                    ObjectMapper objectMapper = new ObjectMapper(); //Secret sauce!
+                    ObjectMapper objectMapper = new ObjectMapper();
                     try {
                         Question question = objectMapper.readValue(qe.getQuestion(), Question.class);
                         ArrayList qOpts = question.getIncorrect_answers();

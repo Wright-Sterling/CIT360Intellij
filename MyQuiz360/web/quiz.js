@@ -1,8 +1,5 @@
 var runningScore = 0; // store and retrieve from local storage
-var questionValue = 0; // will be updated to match difficulty
-var newValue = 0;
 var qButton = document.getElementsByClassName("question-button")[0];
-var downloadTimer = null;
 var canvas =  document.querySelector("canvas");
 var supportLocalStorage = true;
 

@@ -9,6 +9,7 @@
     <list default="true" id="7e17623c-5833-4f6a-8af7-f35afc965eca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../JSON/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JSON/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quizServlet/Servlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quizServlet/Servlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/quiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/quiz.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -78,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/quizServlet/Servlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-305">
-              <caret line="67" column="93" selection-start-line="67" selection-start-column="93" selection-end-line="67" selection-end-column="93" />
+            <state relative-caret-position="-525">
+              <caret line="56" column="67" selection-start-line="56" selection-start-column="67" selection-end-line="56" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#0#33#1" expanded="true" />
@@ -100,11 +101,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/quiz.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="-907">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -142,8 +143,8 @@
         <option value="$PROJECT_DIR$/src/quizServlet/Question.java" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/main.css" />
-        <option value="$PROJECT_DIR$/src/quizServlet/Servlet.java" />
         <option value="$PROJECT_DIR$/web/quiz.js" />
+        <option value="$PROJECT_DIR$/src/quizServlet/Servlet.java" />
       </list>
     </option>
   </component>
@@ -419,7 +420,7 @@
       <workItem from="1554389866965" duration="10810000" />
       <workItem from="1554732498207" duration="45803000" />
       <workItem from="1554915140990" duration="7694000" />
-      <workItem from="1554999075476" duration="3945000" />
+      <workItem from="1554999075476" duration="4279000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/Wright-Sterling/CIT360Intellij&#10;&#10;# Conflicts:&#10;#&#9;MyHibernate/.idea/dataSources/7ac51154-e7c8-4b7f-a24c-2c391e50a2b1.xml&#10;#&#9;MyHibernate/.idea/workspace.xml&#10;#&#9;MyServlet1/.idea/workspace.xml">
       <created>1554212202071</created>
@@ -512,11 +513,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555002401097</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Updated to successfully use local storage for running total.">
+      <created>1555006157468</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1555006157468</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100388000" />
+    <option name="totallyTimeSpent" value="100722000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -626,7 +634,8 @@
     <MESSAGE value="Added getter to Question to return numeric value of question" />
     <MESSAGE value="Retrieve and test for correct answer" />
     <MESSAGE value="Attempted but failed to use local storage for running total." />
-    <option name="LAST_COMMIT_MESSAGE" value="Attempted but failed to use local storage for running total." />
+    <MESSAGE value="Updated to successfully use local storage for running total." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated to successfully use local storage for running total." />
   </component>
   <component name="editorHistoryManager">
     <entry file="das://57367fd7-254c-4a8e-96f3-ed5bc3cef3e5/schema/hibernate/table/inventory" />
@@ -783,21 +792,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/quiz.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-907">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/quizServlet/Servlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-305">
-          <caret line="67" column="93" selection-start-line="67" selection-start-column="93" selection-end-line="67" selection-end-column="93" />
+        <state relative-caret-position="-525">
+          <caret line="56" column="67" selection-start-line="56" selection-start-column="67" selection-end-line="56" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#0#33#1" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/quiz.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
