@@ -4,7 +4,7 @@ var newValue = 0;
 var qButton = document.getElementsByClassName("question-button")[0];
 var downloadTimer = null;
 var canvas =  document.querySelector("canvas");
-var supportLocalStorage;
+var supportLocalStorage = true;
 
 if (typeof (Storage) === "undefined") {
     alert("Your browser does not support local storage. Your score will not persist between questions.");

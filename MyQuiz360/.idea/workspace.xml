@@ -103,8 +103,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/quiz.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+            <state relative-caret-position="88">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -419,7 +419,7 @@
       <workItem from="1554389866965" duration="10810000" />
       <workItem from="1554732498207" duration="45803000" />
       <workItem from="1554915140990" duration="7694000" />
-      <workItem from="1554999075476" duration="3100000" />
+      <workItem from="1554999075476" duration="3945000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/Wright-Sterling/CIT360Intellij&#10;&#10;# Conflicts:&#10;#&#9;MyHibernate/.idea/dataSources/7ac51154-e7c8-4b7f-a24c-2c391e50a2b1.xml&#10;#&#9;MyHibernate/.idea/workspace.xml&#10;#&#9;MyServlet1/.idea/workspace.xml">
       <created>1554212202071</created>
@@ -505,11 +505,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555000385079</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Attempted but failed to use local storage for running total.">
+      <created>1555002401097</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1555002401097</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99543000" />
+    <option name="totallyTimeSpent" value="100388000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -522,6 +529,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48956355" visible="true" weight="0.19936034" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -617,7 +625,8 @@
     <MESSAGE value="Cleaned up index.jsp and associated .js and .css files" />
     <MESSAGE value="Added getter to Question to return numeric value of question" />
     <MESSAGE value="Retrieve and test for correct answer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Retrieve and test for correct answer" />
+    <MESSAGE value="Attempted but failed to use local storage for running total." />
+    <option name="LAST_COMMIT_MESSAGE" value="Attempted but failed to use local storage for running total." />
   </component>
   <component name="editorHistoryManager">
     <entry file="das://57367fd7-254c-4a8e-96f3-ed5bc3cef3e5/schema/hibernate/table/inventory" />
@@ -787,8 +796,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/quiz.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        <state relative-caret-position="88">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
